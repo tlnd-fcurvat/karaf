@@ -109,6 +109,14 @@
             <scope>provided</scope>
         </dependency>
 
+		<!-- Aries proxy deps -->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-all</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+		
         <!-- wrapper deps -->
         <dependency>
             <groupId>org.apache.karaf.wrapper</groupId>
