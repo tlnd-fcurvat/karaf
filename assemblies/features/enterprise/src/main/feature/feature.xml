@@ -20,7 +20,6 @@
 
     <!-- NB: this file is not the one really used. This file is used by the karaf-maven-plugin to define the start-level of bundles in the generated feature.xml -->
 
-    <repository>mvn:org.hibernate/hibernate-validator-osgi-karaf-features/${hibernate.validator.version}/xml/features</repository>
     <repository>mvn:org.ops4j.pax.cdi/pax-cdi-features/${pax.cdi.version}/xml/features</repository>
     <repository>mvn:org.ops4j.pax.jdbc/pax-jdbc-features/${pax.jdbc.version}/xml/features</repository>
     <repository>mvn:org.apache.karaf.features/standard/${project.version}/xml/features</repository>
@@ -288,6 +287,7 @@
         <feature version="${project.version}">obr</feature>
         <feature>aries-blueprint</feature>
         <!-- common -->
+        <bundle dependency="true" start-level="30">mvn:org.apache.aries/org.apache.aries.util/${aries.util.version}</bundle>
         <bundle start-level="30">mvn:org.apache.aries.application/org.apache.aries.application.resolver.obr/${aries.application.version}</bundle>
         <bundle start-level="30">mvn:org.apache.aries.application/org.apache.aries.application.install/${aries.application.version}</bundle>
         <bundle start-level="30">mvn:org.apache.aries.application/org.apache.aries.application.api/${aries.application.api.version}</bundle>
